@@ -125,7 +125,7 @@ button {
 
 /* ====== BRANDS ====== */
 
-.brands {
+.brands-section {
   width: 100%;
   background-color: #000000;
   padding: 42px 0;
@@ -160,13 +160,12 @@ button {
   margin-top: 56px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  place-items: center;
   gap: 20px;
 }
 
 .clothing-card .image-container {
-  width: 296px;
-  height: 298px;
+  width: 100%;
+  aspect-ratio: 296 / 298;
 }
 
 .clothing-card img {
@@ -180,12 +179,47 @@ button {
   font-weight: 700;
   font-size: 20px;
   margin-top: 16px;
+  margin-bottom: 8px;
 }
 
 /* .clothing-card:hover {
   transform: translateY(-10px) scale(1.02);
 } */
 
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 8px;
+}
+
+.star-rating-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.star-rating-icons img:last-child {
+  width: 8px;
+  height: 18px;
+}
+.star-rating img {
+  width: 18px;
+  height: 18px;
+}
+
+.rating-number {
+  font-size: 14px;
+}
+
+.max-rating {
+  color: #00000099;
+}
+
+.clothing-card .price {
+  font-weight: 700;
+  font-size: 24px;
+}
 /* ====== MEDIA QUERIES ====== */
 
 @media (max-width: 1440px) {
