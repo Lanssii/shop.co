@@ -146,21 +146,25 @@ button {
   display: block;
 }
 
-/* ====== CLOTHING ====== */
+/* ====== ARRIVALS SECTION ====== */
 
 .arrivals-section {
   padding: 72px 0px;
 }
-.clothing-cards h1 {
-  text-align: center;
-  font-weight: 700;
-  font-size: 48px;
-}
+
+/* ====== PRODUCT GRID ====== */
+
 .clothing-card-grid {
   margin-top: 56px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+}
+
+.clothing-cards h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
 }
 
 .clothing-card {
@@ -171,6 +175,15 @@ button {
 .clothing-card:hover {
   transform: translateY(-8px);
 }
+
+.clothing-card h3 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+/* ====== PRODUCT IMAGE ====== */
 
 .clothing-card .image-container {
   width: 100%;
@@ -189,16 +202,11 @@ button {
   transition: transform 0.4s ease;
 }
 
-.clothing-card h3 {
-  font-weight: 700;
-  font-size: 20px;
-  margin-top: 16px;
-  margin-bottom: 8px;
-}
-
 .clothing-card:hover .image-container img {
   transform: scale(1.05);
 }
+
+/* ====== PRODUCT RATING ====== */
 
 .star-rating {
   display: flex;
@@ -230,6 +238,7 @@ button {
   color: #00000099;
 }
 
+/* ====== PRODUCT PRICE ====== */
 .price-container {
   display: flex;
   align-items: center;
@@ -255,6 +264,29 @@ button {
   border-radius: 62px;
   font-size: 12px;
   font-weight: 500;
+}
+
+/* ====== VIEW ALL BUTTON ====== */
+.view-button {
+  display: block;
+  margin: 36px auto 64px;
+  padding: 16px 80px;
+  font-weight: 500;
+
+  border: 1px solid #0000001a;
+  border-radius: 62px;
+
+  transition: all 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.clothing-cards hr {
+  border: 1px solid #0000001a;
 }
 /* ====== MEDIA QUERIES ====== */
 
