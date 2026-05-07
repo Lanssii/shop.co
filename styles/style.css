@@ -230,9 +230,31 @@ button {
   color: #00000099;
 }
 
-.clothing-card .price {
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.clothing-card .price,
+.price-old {
   font-weight: 700;
   font-size: 24px;
+}
+
+.price-old {
+  text-decoration: line-through;
+  text-decoration-color: #00000066;
+  color: #00000066;
+}
+
+.discount-badge {
+  background-color: #ff33331a;
+  color: #ff3333;
+  padding: 6px 14px;
+  border-radius: 62px;
+  font-size: 12px;
+  font-weight: 500;
 }
 /* ====== MEDIA QUERIES ====== */
 
