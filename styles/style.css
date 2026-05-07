@@ -221,7 +221,7 @@ button {
   align-items: center;
   gap: 6px;
 }
-.star-rating-icons img:last-child {
+.star-rating-icons .star-half {
   width: 8px;
   height: 18px;
 }
@@ -285,8 +285,14 @@ button {
   transform: translateY(-2px);
 }
 
-.clothing-cards hr {
+.section-divider {
   border: 1px solid #0000001a;
+}
+
+/* ====== SELLING SECTION ====== */
+
+.selling-section {
+  padding: 72px 0px;
 }
 /* ====== MEDIA QUERIES ====== */
 
