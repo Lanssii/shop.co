@@ -161,7 +161,7 @@ button {
   gap: 20px;
 }
 
-.clothing-cards h1 {
+.clothing-cards h2 {
   text-align: center;
   font-weight: 700;
   font-size: 48px;
@@ -289,11 +289,83 @@ button {
   border: 1px solid #0000001a;
 }
 
-/* ====== SELLING SECTION ====== */
-
-.selling-section {
-  padding: 72px 0px;
+/* ====== DRESS STYLES ====== */
+.dress-styles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background-color: #f0f0f0;
+  padding: 70px;
+  border-radius: 40px;
 }
+
+.dress-styles h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.dress-styles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+.style-card:nth-child(1) {
+  grid-column: span 1;
+}
+
+.style-card:nth-child(2) {
+  grid-column: span 2;
+}
+
+.style-card:nth-child(3) {
+  grid-column: span 2;
+}
+
+.style-card:nth-child(4) {
+  grid-column: span 1;
+}
+
+.style-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.style-card img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.reverse {
+  transform: scaleX(-1);
+}
+
+.style-card:hover img {
+  transform: scale(1.04);
+}
+.style-card:hover .reverse {
+  transform: scaleX(-1) scale(1.04);
+}
+
+.style-card-title {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-weight: 700;
+  font-size: 36px;
+  color: #000000;
+  padding: 4px 12px;
+  z-index: 2;
+}
+
 /* ====== MEDIA QUERIES ====== */
 
 @media (max-width: 1440px) {
@@ -309,5 +381,19 @@ button {
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
+  }
+  .dress-styles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .style-card:nth-child(1),
+  .style-card:nth-child(2),
+  .style-card:nth-child(3),
+  .style-card:nth-child(4) {
+    grid-column: span 1;
+  }
+
+  .style-card img {
+    height: 260px;
   }
 }
