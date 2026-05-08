@@ -369,6 +369,54 @@ button {
   z-index: 2;
 }
 
+/* ====== REVIEWS ====== */
+.reviews-section {
+  padding: 72px 0px;
+}
+
+.reviews h2 {
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.carousel-controls {
+  text-align: end;
+}
+
+.carousel-controls button {
+  transition: transform 0.2s ease-out;
+}
+
+.carousel-controls button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* ====== REVIEW CARD ====== */
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 400px;
+
+  border: 1px solid #0000001a;
+  border-radius: 20px;
+  padding: 28px 32px;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.review {
+  color: #00000099;
+  line-height: 1.4;
+}
+
 /* ====== MEDIA QUERIES ====== */
 
 @media (max-width: 1440px) {
