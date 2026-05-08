@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Integral CF";
+  src: url("../Demo_Fonts/Fontspring-DEMO-integralcf-bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -46,7 +54,8 @@ button {
 }
 
 .hero h1 {
-  font-size: 64px;
+  font-family: "Integral CF", sans-serif;
+  font-size: 62px;
   font-weight: 700;
   margin-bottom: 32px;
 }
@@ -162,6 +171,7 @@ button {
 }
 
 .clothing-cards h2 {
+  font-family: "Integral CF", sans-serif;
   text-align: center;
   font-weight: 700;
   font-size: 48px;
@@ -301,6 +311,7 @@ button {
 }
 
 .dress-styles h2 {
+  font-family: "Integral CF", sans-serif;
   text-align: center;
   font-weight: 700;
   font-size: 48px;
@@ -375,6 +386,7 @@ button {
 }
 
 .reviews h2 {
+  font-family: "Integral CF", sans-serif;
   font-weight: 700;
   font-size: 48px;
 }
@@ -395,7 +407,6 @@ button {
 /* ====== REVIEW CARD ====== */
 .reviews-swiper {
   margin-top: 40px;
-  gap: 20px;
 }
 .review-card {
   display: flex;
