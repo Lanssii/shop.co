@@ -342,17 +342,20 @@ button {
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
+
+  object-position: center 40%;
 }
 
-.reverse {
-  transform: scaleX(-1);
+.style-card:nth-child(1) img.reverse {
+  transform: scale(1.9) scaleX(-1);
 }
 
 .style-card:hover img {
   transform: scale(1.04);
 }
-.style-card:hover .reverse {
-  transform: scaleX(-1) scale(1.04);
+
+.style-card:nth-child(1):hover img.reverse {
+  transform: scale(2) scaleX(-1);
 }
 
 .style-card-title {
@@ -395,5 +398,11 @@ button {
 
   .style-card img {
     height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dress-styles {
+    padding: 32px 20px;
   }
 }
