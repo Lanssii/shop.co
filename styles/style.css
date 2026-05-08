@@ -393,18 +393,14 @@ button {
 }
 
 /* ====== REVIEW CARD ====== */
-.review-cards-container {
+.reviews-swiper {
   margin-top: 40px;
-  display: flex;
   gap: 20px;
-  align-items: center;
 }
 .review-card {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 100%;
-  max-width: 400px;
   height: 240px;
 
   border: 1px solid #0000001a;
