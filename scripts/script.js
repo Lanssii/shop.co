@@ -9,19 +9,29 @@ if (closeBar) {
 }
 
 // ====== DROPDOWN MENU ====== //
-const dropdown = document.querySelector(".dropdown");
-const dropdownLink = dropdown.querySelector("a");
+const dropdowns = document.querySelectorAll(".dropdown");
 
-dropdownLink.addEventListener("click", function (e) {
-  e.preventDefault();
+dropdowns.forEach((dropdown) => {
+  const dropdownLink = dropdown.querySelector("a");
 
-  dropdown.classList.toggle("active");
+  dropdownLink.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    dropdowns.forEach((other) => {
+      if (other !== dropdown) other.classList.remove("active");
+    });
+
+    dropdown.classList.toggle("active");
+  });
 });
 
+// Close when clicking outside
 document.addEventListener("click", function (e) {
-  if (!dropdown.contains(e.target)) {
-    dropdown.classList.remove("active");
-  }
+  dropdowns.forEach((dropdown) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove("active");
+    }
+  });
 });
 
 // ====== REVIEWS SLIDER (SWIPER) ====== //
@@ -59,7 +69,7 @@ let overlay = document.querySelector(".overlay");
 let closeBtn = document.querySelector(".close-btn");
 
 function checkWidth() {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1024) {
     headerNavContainer.style.display = "none";
     sidebar.appendChild(headerNav);
     burgerMenu.classList.add("show");

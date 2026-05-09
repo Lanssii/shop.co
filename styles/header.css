@@ -205,7 +205,18 @@
 .overlay.show {
   display: block;
 }
-
+.mobile-only {
+  display: none;
+}
+.sign-up-btn {
+  border: none;
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 14px 32px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 72px;
+}
 /* ====== MEDIA QUERIES ====== */
 @media (max-width: 1200px) {
   .header-nav {
@@ -217,7 +228,13 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
   .search-container {
     flex-grow: 0;
     margin-left: auto;
@@ -250,8 +267,17 @@
     margin-top: 70px;
     flex-direction: column;
   }
-}
 
+  .sidebar .dropdown-menu {
+    position: static;
+    display: none;
+    padding-left: 15px;
+  }
+
+  .sidebar .dropdown.active .dropdown-menu {
+    display: block;
+  }
+}
 @media (max-width: 490px) {
   .sidebar {
     width: 100%;
