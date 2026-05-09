@@ -139,6 +139,7 @@
 /* ====== BURGER MENU ====== */
 .burger-menu {
   width: fit-content;
+  display: none;
 }
 .burger-menu.show {
   cursor: pointer;

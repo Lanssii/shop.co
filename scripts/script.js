@@ -8,6 +8,32 @@ if (closeBar) {
   });
 }
 
+// ===== COUNTER ANIMATION =====
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach((counter) => {
+  const target = +counter.dataset.target;
+
+  let current = 0;
+
+  const updateCounter = () => {
+    const increment = target / 200;
+
+    if (current < target) {
+      current += increment;
+
+      counter.innerText = Math.ceil(current).toLocaleString() + "+";
+
+      requestAnimationFrame(updateCounter);
+    } else {
+      counter.innerText = target.toLocaleString() + "+";
+    }
+  };
+
+  updateCounter();
+});
+
 // ====== DROPDOWN MENU ====== //
 const dropdowns = document.querySelectorAll(".dropdown");
 
