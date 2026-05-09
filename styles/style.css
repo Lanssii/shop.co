@@ -659,6 +659,9 @@ input:focus {
   .star-small img {
     width: 44px;
   }
+  .clothing-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .clothing-cards h2,
   .dress-styles h2,
   .reviews h2,
@@ -737,12 +740,5 @@ input:focus {
   }
   .clothing-card-grid {
     grid-template-columns: repeat(1, 1fr);
-  }
-  .footer-links-group {
-    flex-direction: column;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    gap: 10px;
   }
 }
