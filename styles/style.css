@@ -34,9 +34,8 @@ button {
 }
 
 .container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  width: min(1240px, 100% - 32px);
+  margin-inline: auto;
 }
 
 /* ====== HERO ====== */
@@ -549,11 +548,13 @@ input:focus {
 }
 /* ====== MEDIA QUERIES ====== */
 
-@media (max-width: 1440px) {
+@media (min-width: 1600px) {
   .container {
-    max-width: 1240px;
+    width: min(1440px, 100% - 48px);
   }
+}
 
+@media (max-width: 1440px) {
   .counters hr {
     margin: 0px 16px 0px 16px;
   }
@@ -568,9 +569,7 @@ input:focus {
   .brands-section {
     padding: 32px 0;
   }
-  .container {
-    max-width: 900px;
-  }
+
   .counters span {
     font-size: 34px;
   }
@@ -653,9 +652,6 @@ input:focus {
 }
 
 @media (max-width: 768px) {
-  .container {
-    max-width: 700px;
-  }
   .hero-section {
     min-height: auto;
   }
@@ -722,9 +718,6 @@ input:focus {
 }
 
 @media (max-width: 490px) {
-  .container {
-    max-width: 400px;
-  }
   .hero {
     padding: 30px 16px 0;
   }
@@ -805,11 +798,5 @@ input:focus {
   .clothing-card-grid {
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
-}
-
-@media (max-width: 390px) {
-  .container {
-    max-width: 350px;
   }
 }
