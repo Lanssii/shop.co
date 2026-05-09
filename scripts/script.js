@@ -137,3 +137,22 @@ document.addEventListener("click", (e) => {
     closeMenu();
   }
 });
+
+// ===== SCROLL TO TOP =====
+
+const scrollTopBtn = document.querySelector(".scroll-top-btn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 1000) {
+    scrollTopBtn.classList.add("show");
+  } else {
+    scrollTopBtn.classList.remove("show");
+  }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
