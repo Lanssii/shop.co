@@ -230,6 +230,9 @@
 }
 
 @media (max-width: 1024px) {
+  .logo {
+    font-size: 28px;
+  }
   .desktop-only {
     display: none;
   }
@@ -277,6 +280,11 @@
 
   .sidebar .dropdown.active .dropdown-menu {
     display: block;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    font-size: 24px;
   }
 }
 @media (max-width: 490px) {

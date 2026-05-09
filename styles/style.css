@@ -560,6 +560,14 @@ input:focus {
 }
 
 @media (max-width: 1024px) {
+  .brands-item img {
+    width: 116px;
+    height: 23px;
+    object-fit: contain;
+  }
+  .brands-section {
+    padding: 32px 0;
+  }
   .container {
     max-width: 900px;
   }
