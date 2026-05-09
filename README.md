@@ -119,13 +119,15 @@ shop-co/
 │
 ├── index.html
 │
+├── favicon.ico
+│
 ├── styles/
 │   ├── reset.css
 │   ├── style.css
 │   ├── header.css
 │   └── footer.css
 │
-├── js/
+├── scripts/
 │   └── script.js
 │
 ├── images/
