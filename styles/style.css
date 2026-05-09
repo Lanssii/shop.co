@@ -646,6 +646,9 @@ input:focus {
   .style-card img {
     height: 260px;
   }
+  .style-card-title {
+    font-size: 30px;
+  }
   .newsletter {
     padding: 42px 46px;
   }
@@ -702,6 +705,7 @@ input:focus {
   .clothing-card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .clothing-cards h2,
   .dress-styles h2,
   .reviews h2,
@@ -710,6 +714,9 @@ input:focus {
   }
   .dress-styles {
     padding: 40px;
+  }
+  .style-card-title {
+    font-size: 24px;
   }
   .newsletter {
     flex-direction: column;
