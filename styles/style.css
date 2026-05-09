@@ -672,7 +672,6 @@ input:focus {
   .hero p {
     font-size: 15px;
   }
-
   .shop-btn {
     width: 100%;
     max-width: 320px;
@@ -783,7 +782,34 @@ input:focus {
   .star-small img {
     width: 34px;
   }
+  /* scroll products for mobile */
   .clothing-card-grid {
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+
+    scroll-snap-type: x mandatory;
+
+    padding-bottom: 10px;
+  }
+
+  .clothing-card {
+    min-width: 100%;
+
+    scroll-snap-align: start;
+  }
+  .clothing-card-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .clothing-card-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    max-width: 350px;
   }
 }
