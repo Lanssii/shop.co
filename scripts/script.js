@@ -1,4 +1,4 @@
-// ====== ANNOUNCEMENT BAR ======
+// ====== ANNOUNCEMENT BAR ====== //
 const announcementBar = document.querySelector(".announcement-bar");
 const closeBar = document.querySelector(".close-bar");
 
@@ -8,7 +8,7 @@ if (closeBar) {
   });
 }
 
-// ====== DROPDOWN MENU ======
+// ====== DROPDOWN MENU ====== //
 const dropdown = document.querySelector(".dropdown");
 const dropdownLink = dropdown.querySelector("a");
 
@@ -24,7 +24,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// ====== REVIEWS SLIDER (SWIPER) ======
+// ====== REVIEWS SLIDER (SWIPER) ====== //
 const swiper = new Swiper(".reviews-swiper", {
   slidesPerView: 3,
   spaceBetween: 20,
@@ -47,4 +47,57 @@ const swiper = new Swiper(".reviews-swiper", {
       slidesPerView: 3,
     },
   },
+});
+
+// ===== BURGER MENU =====
+
+const headerNav = document.querySelector(".nav-links");
+let headerNavContainer = document.querySelector(".header-nav-container");
+let burgerMenu = document.querySelector(".burger-menu");
+let sidebar = document.querySelector(".sidebar");
+let overlay = document.querySelector(".overlay");
+let closeBtn = document.querySelector(".close-btn");
+
+function checkWidth() {
+  if (window.innerWidth <= 768) {
+    headerNavContainer.style.display = "none";
+    sidebar.appendChild(headerNav);
+    burgerMenu.classList.add("show");
+  } else {
+    burgerMenu.classList.remove("show");
+    headerNavContainer.style.display = "flex";
+    headerNavContainer.appendChild(headerNav);
+    overlay.classList.remove("show");
+  }
+}
+
+checkWidth();
+window.addEventListener("resize", checkWidth);
+
+// ===== OPEN MENU =====
+burgerMenu.addEventListener("click", () => {
+  sidebar.classList.add("show");
+  overlay.classList.add("show");
+});
+
+// ===== CLOSE MENU =====
+function closeMenu() {
+  sidebar.classList.remove("show");
+  overlay.classList.remove("show");
+}
+
+// Close when clicking overlay
+overlay.addEventListener("click", (e) => {
+  e.stopPropagation();
+  closeMenu();
+});
+
+// Close when clicking close button
+closeBtn.addEventListener("click", closeMenu);
+
+// Close when clicking outside menu
+document.addEventListener("click", (e) => {
+  if (!sidebar.contains(e.target) && !burgerMenu.contains(e.target)) {
+    closeMenu();
+  }
 });
