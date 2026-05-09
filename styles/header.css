@@ -22,6 +22,9 @@
   background-color: #000000;
   color: #ffffff;
 }
+.announcement-bar.hidden {
+  display: none;
+}
 
 .close-bar {
   position: absolute;
@@ -116,7 +119,7 @@
   z-index: 10;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown.active .dropdown-menu {
   display: block;
 }
 
@@ -129,11 +132,4 @@
 
 .dropdown-menu li a:hover {
   background-color: #f5f5f5;
-}
-
-/* ====== MEDIA QUERIES ====== */
-@media (max-width: 1200px) {
-  .close-bar {
-    display: none;
-  }
 }

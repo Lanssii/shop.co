@@ -1,3 +1,30 @@
+// ====== ANNOUNCEMENT BAR ======
+const announcementBar = document.querySelector(".announcement-bar");
+const closeBar = document.querySelector(".close-bar");
+
+if (closeBar) {
+  closeBar.addEventListener("click", () => {
+    announcementBar.classList.add("hidden");
+  });
+}
+
+// ====== DROPDOWN MENU ======
+const dropdown = document.querySelector(".dropdown");
+const dropdownLink = dropdown.querySelector("a");
+
+dropdownLink.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  dropdown.classList.toggle("active");
+});
+
+document.addEventListener("click", function (e) {
+  if (!dropdown.contains(e.target)) {
+    dropdown.classList.remove("active");
+  }
+});
+
+// ====== REVIEWS SLIDER (SWIPER) ======
 const swiper = new Swiper(".reviews-swiper", {
   slidesPerView: 3,
   spaceBetween: 20,
