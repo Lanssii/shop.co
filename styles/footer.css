@@ -97,3 +97,24 @@ footer .section-divider {
   margin-top: 50px;
   margin-bottom: 25px;
 }
+
+.footer-copyright {
+  color: #00000099;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ====== PAYMENTS ====== */
+.footer-payments {
+  display: flex;
+  align-items: center;
+}
+
+.payment-badge:hover {
+  transform: translateY(-2px);
+}
